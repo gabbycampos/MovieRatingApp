@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bodyForm">
+    <form>
+      <h1>jQuery Movie Rating App</h1>
+      <input class="form-control" type="text" name="movie" minlength="2" placeholder="Movie Title">
+      <input class="form-control" type="number" name="rating" min="0" max="10" placeholder="Rating: 0-10">
+      <button id="button">Submit</button>
+    </form>
+
+    <div id="results">
+      <ul class="list"></ul>
+    </div>
+
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  
+  <script>
+
+    let minLength = 2;
+    $(document).ready(function(e) {
+      $('#button').click(function(e) {
+        e.preventDefault()
+        let addMovie = $('input[name=movie]').val();
+        let addRating = $('input[name=rating]').val();
+
+        if ($('input[name=movie]').val().length < minLength) {
+          alert('Movie Title must be longer');
+        } else {
+        $('.list').append('<li class="item">' + addMovie + ' ' + addRating + '<button class="remove">Remove</button' + '</li>');
+        $('input[name=movie]').val('');
+        $('input[name=rating]').val('');
+        }
+      
+      });
+
+// remove
+      $('.list').on('click', '.remove', (function() {
+        $(this).parent().remove();
+      }));
+
+    })
+  </script>
+</body>
+</html>

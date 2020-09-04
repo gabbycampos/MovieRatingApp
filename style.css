@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: 'Fredoka One', cursive;
+  color: #3a3a3a;
+  background-color: #34ADFF;
+  background-image: -webkit-linear-gradient(150deg, #f7afaf 35%, #b0dff8 35%);
+  min-height: 400px;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 2rem;
+  padding: 0 1rem;
+
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+input[type=number]{
+    width: 7rem;
+} 
+input{
+  border: none;
+  border-bottom: 2px solid #3a3a3a;
+  padding: .5rem;
+  text-align: center;
+  background-color: transparent;
+}
+.form-control {
+  margin-right: 3rem;
+}
+button {
+  border-radius: 5px;
+  border: none;
+  padding: .5rem;
+  color: #3a3a3a;
+}
+li {
+  list-style-type: none;
+  padding: .5rem;
+}
+#results {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.remove {
+  margin-left: 1rem;
+}
+.item {
+  margin-left: 1rem;
+}
